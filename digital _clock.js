@@ -17,9 +17,11 @@ const delay = () =>
   });
 
 const main = async () => {
+  const clockElement = document.getElementById("digital_clock");
   try {
     while (true) {
       console.log(Get_time());
+      clockElement.textContent = Get_time(); //updates the content in HTML
       await delay();
     }
   } catch (error) {
